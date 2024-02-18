@@ -17,10 +17,15 @@ class Node{
 
         int getID();
 
-        void addAdj(Node n1, int distance);
+        void addAdj(Node n1, double distance);
+
+        vector<pair<Node,double> > getAdj();
 };
 
 class Graph{
+    public:
+    vector<Node> shortestPath(Node n1, Node n2);
+    void setNodes(vector<Node> nodes);
     private:
         vector<Node> nodes;
 };
